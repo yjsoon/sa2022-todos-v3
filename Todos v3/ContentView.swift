@@ -17,9 +17,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Todos", systemImage: "checkmark.circle.fill")
                 }
-            Text("\(todoManager.todos.count) undone todos")
+            HowManyMoreView(todoManager: todoManager)
                 .tabItem {
-                    Label("Number of undone todos", systemImage: "person")
+                    Label("How many more", systemImage: "number.circle")
                 }
         }
     }
