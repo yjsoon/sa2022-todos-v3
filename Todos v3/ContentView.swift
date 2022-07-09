@@ -9,18 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var todos = [
-        Todo(title: "Feed the cat"),
-        Todo(title: "Water the plants"),
-        Todo(title: "Completely change all the groups and watch everyone panic", isCompleted: true)
-    ]
-    
     @State var isNewSheetShown = false
+    
+    @StateObject var todoManager = TodoManager()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach($todos) { $todo in
+                ForEach($todoManager.todos) { $todo in
                     NavigationLink {
                         TodoDetailView(todo: $todo)
                     } label: {
@@ -31,10 +27,10 @@ struct ContentView: View {
                     }
                 }
                 .onDelete { indexSet in
-                    todos.remove(atOffsets: indexSet)
+                    todoManager.todos.remove(atOffsets: indexSet)
                 }
                 .onMove { originalOffset, newOffset in
-                    todos.move(fromOffsets: originalOffset, toOffset: newOffset)
+                    todoManager.todos.move(fromOffsets: originalOffset, toOffset: newOffset)
                 }
             }
             .navigationTitle("Todos")
@@ -52,7 +48,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $isNewSheetShown) {
-            NewTodoView(todos: $todos)
+            NewTodoView(todos: $todoManager.todos)
         }
     }
 }
