@@ -8,47 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var isNewSheetShown = false
-    
+        
     @StateObject var todoManager = TodoManager()
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach($todoManager.todos) { $todo in
-                    NavigationLink {
-                        TodoDetailView(todo: $todo)
-                    } label: {
-                        HStack {
-                            Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
-                            Text(todo.title)
-                        }
-                    }
+        TabView {
+            MainTodoListView(todoManager: todoManager)
+                .tabItem {
+                    Label("Todos", systemImage: "checkmark.circle.fill")
                 }
-                .onDelete { indexSet in
-                    todoManager.todos.remove(atOffsets: indexSet)
+            Text("\(todoManager.todos.count) undone todos")
+                .tabItem {
+                    Label("Number of undone todos", systemImage: "person")
                 }
-                .onMove { originalOffset, newOffset in
-                    todoManager.todos.move(fromOffsets: originalOffset, toOffset: newOffset)
-                }
-            }
-            .navigationTitle("Todos")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        isNewSheetShown = true
-                    } label : {
-                        Image(systemName: "plus")
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-            }
-        }
-        .sheet(isPresented: $isNewSheetShown) {
-            NewTodoView(todos: $todoManager.todos)
         }
     }
 }

@@ -15,6 +15,7 @@
 		AF5657B728790F0A0004F3EA /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5657B628790F090004F3EA /* TodoDetailView.swift */; };
 		AF5657B9287913B90004F3EA /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5657B8287913B90004F3EA /* NewTodoView.swift */; };
 		AF5657BB28791CC10004F3EA /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5657BA28791CC10004F3EA /* TodoManager.swift */; };
+		AF5657BD28791F500004F3EA /* MainTodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5657BC28791F500004F3EA /* MainTodoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AF5657B628790F090004F3EA /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		AF5657B8287913B90004F3EA /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
 		AF5657BA28791CC10004F3EA /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		AF5657BC28791F500004F3EA /* MainTodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTodoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				AF5657A628790CF60004F3EA /* Todos_v3App.swift */,
 				AF5657A828790CF60004F3EA /* ContentView.swift */,
+				AF5657BC28791F500004F3EA /* MainTodoListView.swift */,
 				AF5657B8287913B90004F3EA /* NewTodoView.swift */,
 				AF5657B628790F090004F3EA /* TodoDetailView.swift */,
 				AF5657AA28790CF90004F3EA /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				AF5657BB28791CC10004F3EA /* TodoManager.swift in Sources */,
 				AF5657B528790D2D0004F3EA /* Todo.swift in Sources */,
 				AF5657A728790CF60004F3EA /* Todos_v3App.swift in Sources */,
+				AF5657BD28791F500004F3EA /* MainTodoListView.swift in Sources */,
 				AF5657B9287913B90004F3EA /* NewTodoView.swift in Sources */,
 				AF5657B728790F0A0004F3EA /* TodoDetailView.swift in Sources */,
 			);
