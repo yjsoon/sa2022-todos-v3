@@ -15,6 +15,8 @@ struct ContentView: View {
         Todo(title: "Completely change all the groups and watch everyone panic", isCompleted: true)
     ]
     
+    @State var isNewSheetShown = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -37,10 +39,20 @@ struct ContentView: View {
             }
             .navigationTitle("Todos")
             .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isNewSheetShown = true
+                    } label : {
+                        Image(systemName: "plus")
+                    }
+                }
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                 }
             }
+        }
+        .sheet(isPresented: $isNewSheetShown) {
+            NewTodoView(todos: $todos)
         }
     }
 }
