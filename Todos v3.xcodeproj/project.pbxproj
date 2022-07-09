@@ -12,6 +12,7 @@
 		AF5657AB28790CF90004F3EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5657AA28790CF90004F3EA /* Assets.xcassets */; };
 		AF5657AE28790CF90004F3EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5657AD28790CF90004F3EA /* Preview Assets.xcassets */; };
 		AF5657B528790D2D0004F3EA /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5657B428790D2D0004F3EA /* Todo.swift */; };
+		AF5657B728790F0A0004F3EA /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5657B628790F090004F3EA /* TodoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AF5657AA28790CF90004F3EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5657AD28790CF90004F3EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF5657B428790D2D0004F3EA /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		AF5657B628790F090004F3EA /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				AF5657A628790CF60004F3EA /* Todos_v3App.swift */,
 				AF5657A828790CF60004F3EA /* ContentView.swift */,
+				AF5657B628790F090004F3EA /* TodoDetailView.swift */,
 				AF5657AA28790CF90004F3EA /* Assets.xcassets */,
 				AF5657AC28790CF90004F3EA /* Preview Content */,
 				AF5657B428790D2D0004F3EA /* Todo.swift */,
@@ -143,6 +146,7 @@
 				AF5657A928790CF60004F3EA /* ContentView.swift in Sources */,
 				AF5657B528790D2D0004F3EA /* Todo.swift in Sources */,
 				AF5657A728790CF60004F3EA /* Todos_v3App.swift in Sources */,
+				AF5657B728790F0A0004F3EA /* TodoDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

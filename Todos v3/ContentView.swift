@@ -18,9 +18,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(todos) { todo in
-                HStack {
-                    Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
-                    Text(todo.title)
+                NavigationLink {
+                    TodoDetailView(todo: todo)
+                } label: {
+                    HStack {
+                        Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
+                        Text(todo.title)
+                    }
                 }
             }
             .navigationTitle("Todos")
