@@ -31,6 +31,9 @@ struct ContentView: View {
                 .onDelete { indexSet in
                     todos.remove(atOffsets: indexSet)
                 }
+                .onMove { originalOffset, newOffset in
+                    todos.move(fromOffsets: originalOffset, toOffset: newOffset)
+                }
             }
             .navigationTitle("Todos")
             .toolbar {
