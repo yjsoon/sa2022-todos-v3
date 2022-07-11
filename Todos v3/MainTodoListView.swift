@@ -21,7 +21,12 @@ struct MainTodoListView: View {
                     } label: {
                         HStack {
                             Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
+                                .onTapGesture {
+                                    todo.isCompleted.toggle()
+                                }
                             Text(todo.title)
+                                .foregroundColor(todo.isCompleted ? .gray : nil )
+                                .strikethrough(todo.isCompleted)
                         }
                     }
                 }
